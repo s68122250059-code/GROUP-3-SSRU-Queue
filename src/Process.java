@@ -1,31 +1,15 @@
-/**
- * Process: โครงสร้างข้อมูล Process ที่ใช้ร่วมกันทั้ง FCFS และ Round Robin
- */
+/** ข้อมูล Process หนึ่งตัวในระบบ */
 public class Process {
-    final String id;
-    final int arrivalTime;
-    final int burstTime;
-    int remainingTime;
+    String id;
+    int arrival, burst, remaining;
+    int start, finish, wait, turnaround;
 
-    // ผลลัพธ์หลังจำลองเสร็จ
-    int startTime = -1;      // เวลาที่เริ่มทำงานครั้งแรก (Response Time)
-    int finishTime = -1;
-    int waitingTime = -1;
-    int turnaroundTime = -1;
-
-    public Process(String id, int arrivalTime, int burstTime) {
+    Process(String id, int arrival, int burst) {
         this.id = id;
-        this.arrivalTime = arrivalTime;
-        this.burstTime = burstTime;
-        this.remainingTime = burstTime;
+        this.arrival = arrival;
+        this.burst = burst;
+        this.remaining = burst;
     }
 
-    public Process copy() {
-        return new Process(this.id, this.arrivalTime, this.burstTime);
-    }
-
-    @Override
-    public String toString() {
-        return id + "(arr=" + arrivalTime + ",burst=" + burstTime + ")";
-    }
+    Process copy() { return new Process(id, arrival, burst); }
 }
