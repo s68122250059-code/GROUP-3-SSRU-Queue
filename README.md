@@ -1,6 +1,6 @@
 # CPU Process Scheduling — กลุ่มที่ 4
 
-โปรแกรมจำลอง Algorithm A (FCFS) และ Algorithm B (Round Robin) — เวอร์ชันกระชับ 3 ไฟล์
+โปรแกรมจำลอง Algorithm A (FCFS) และ Algorithm B (Round Robin) 
 
 ## โครงสร้างไฟล์
 
